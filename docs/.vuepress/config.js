@@ -150,6 +150,10 @@ module.exports = {
             text: "JS数组方法合集",
             link: "/JS/数组方法.md",
           },
+          {
+            text: "面试基本问题",
+            link: "/JS/面试基本问题.md",
+          },
         ],
       },
       // Git
