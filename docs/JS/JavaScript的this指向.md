@@ -139,7 +139,7 @@ foo(); // window , 丢失了隐式绑定的 obj
 
 bind 绑定会返回一个**新的函数**，另外两种会立即执行。
 
-call 和 apply 的区别：apply 传入数组，call 传入参数列表
+call 和 apply 的主要区别在于参数的传递方式。如果参数数量已知且较少，可以使用 call；如果参数数量不确定或非常多，可以考虑使用 apply。
 
 ```js
 // 使用 call、apply、bind, 传入参数就是this

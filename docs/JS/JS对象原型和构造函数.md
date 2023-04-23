@@ -74,6 +74,8 @@ console.log(person1.sing === person2.sing); // false
 
 ![img02](/images/JS/JS原型链02.png)
 
+---
+
 在构造函数的原型上定义 sing 方法：
 
 ```js
