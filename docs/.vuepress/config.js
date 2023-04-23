@@ -84,6 +84,10 @@ module.exports = {
             text: "响应式原理",
             link: "/Vue3/响应式原理.md",
           },
+          {
+            text: "梳理知识点",
+            link: "/Vue3/梳理知识点.md",
+          },
         ],
       },
       // node
