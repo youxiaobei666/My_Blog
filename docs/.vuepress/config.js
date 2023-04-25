@@ -10,6 +10,11 @@ module.exports = {
     // 导航栏
     nav: [
       { text: "主页", link: "/" },
+      // 技术分享
+      {
+        text: "技术分享",
+        link: "/SkillsShare/index.md",
+      },
       // vue2
       {
         text: "Vue2",

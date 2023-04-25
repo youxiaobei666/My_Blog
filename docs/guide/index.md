@@ -1,5 +1,7 @@
 # 小游是一个前端，前端 YYDS
 
+## [技术分享](/SkillsShare/index.md)
+
 ## [点击查看 Vue2](/Vue2/index.md)
 
 ## [点击查看 Vue3](/Vue3/index.md)
