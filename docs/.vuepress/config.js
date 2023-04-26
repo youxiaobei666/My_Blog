@@ -115,6 +115,10 @@ module.exports = {
             text: "脚手架 Express-generator",
             link: "/Node/脚手架Express-generator.md",
           },
+          {
+            text: "Node登陆鉴权",
+            link: "/Node/登陆鉴权.md",
+          },
         ],
       },
       // webpack
