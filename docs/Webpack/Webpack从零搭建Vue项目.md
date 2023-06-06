@@ -98,6 +98,12 @@ webpack.config.js （也可以是 webpack.config.json）文件，webpack 的所�
 
 webpack.config.js 文件的书写规则，整个文件内部使用 `module.exports = { 里面书写键值对 }` 导出
 
+有关模块导入、导出的两种方式 EsModule 和 commonJS:
+
+ES modules 和 CommonJS 是两种不同的模块系统，用于在 JavaScript 中管理和组织代码。
+
+CommonJS 是 Node.js 标准采用的模块系统。它使用 require() 函数来加载依赖项，并使用 module.exports 或 exports 对象公开模块中的内容。
+
 ## 3. 入口出口（entry、output）
 
 ### 3.1 打包入口 （entry）

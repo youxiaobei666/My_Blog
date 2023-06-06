@@ -42,7 +42,7 @@ Axios，是一个基于 promise 的网络请求库，作用于 node.js 和浏览
 ## 3. 使用 async 和 await 配合 axios 发起请求
 
 :::tip
-async 和 await 必须结合使用，有 await 必须要使用 async， 有 async 不一定要使用 await，await 是将异步转为同步,async 和 await 是 es7 语法
+async 和 await 必须结合使用，有 await 必须要使用 async， 有 async 不一定要使用 await，await 是将异步转为同步,async 和 await 是 es8 语法
 :::
 
 ```javascript

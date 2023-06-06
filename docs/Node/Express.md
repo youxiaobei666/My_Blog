@@ -122,6 +122,66 @@ app.listen(8080, () => {
 });
 ```
 
+### 跨域
+
+在 Node.js 中，我们可以通过设置响应头来允许跨域请求。下面是设置跨域响应头的步骤：
+
+在需要进行跨域响应的路由（接口）中添加如下代码。
+
+```javascript
+res.header("Access-Control-Allow-Origin", "*");
+res.header(
+  "Access-Control-Allow-Headers",
+  "Content-Type, Content-Length, Authorization, Accept, X-Requested-With"
+);
+res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
+```
+
+其中，`Access-Control-Allow-Origin `表示允许跨域请求的源地址，使用 "" 表示允许所有源地址的请求。如果只想允许特定的源地址进行请求，可以将 "" 替换成具体的源地址。
+
+`Access-Control-Allow-Headers` 表示允许跨域请求携带的额外请求头字段。
+
+`Access-Control-Allow-Methods` 表示允许跨域请求的 `HTTP` 方法，包括 `PUT、POST、GET、DELETE` 和 `OPTIONS` 等。
+
+对于前端发送的 `OPTIONS` 请求，需要在相应路由（接口）中添加以下代码，以允许预检请求。
+
+```javascript
+if (req.method === "OPTIONS") {
+  res.sendStatus(200);
+}
+```
+
+完整的示例代码如下：
+
+```javascript
+const express = require("express");
+
+const app = express();
+
+// 设置跨域响应头
+app.all("*", function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Content-Length, Authorization, Accept, X-Requested-With"
+  );
+  res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
+  if (req.method === "OPTIONS") {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(3000, () => {
+  console.log("Example app listening on port 3000!");
+});
+```
+
 ## 5. 全局和路由中间件
 
 全局和路由的中间件，附两个案例:

@@ -116,10 +116,10 @@ pushArr(arr);
 pushArr(arr, [123], [456]);
 ```
 
-### 04\_定义元祖:
+### 04\_定义元组:
 
 ```ts
-let yuanzu: [string, number, boolean]; // 元祖类型，数量类型都得对应
+let yuanzu: [string, number, boolean]; // 元组类型，数量类型都得对应
 yuanzu = ["youxiaobei", 1, true];
 
 // 当数量和类型都不确定，使用 any[]
@@ -134,14 +134,14 @@ let [id, name] = emploee;
 console.log(`id : ${id}`); //id : 1
 console.log(`name : ${name}`); //name : youxiaobei
 
-// 元祖可选元素
+// 元组可选元素
 let choose: [string, boolean?];
 choose = ["i can choose", true];
 console.log(`choose : ${choose}`);
 choose = ["i no choose"];
 console.log(`choose : ${choose}`);
 
-// 元祖剩余元素
+// 元组剩余元素
 let lefted: [string, ...number[]];
 lefted = ["lefted meta", 1, 2, 3, 4, 5];
 console.log(`lefted : ${lefted}`);

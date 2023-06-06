@@ -123,8 +123,24 @@ module.exports = {
       },
       // webpack
       { text: "Webpack", link: "/Webpack/index.md" },
-      // axios
-      { text: "Axios", link: "/Axios/Axios介绍和基本使用.md" },
+      // netWork
+      {
+        text: "newWork",
+        items: [
+          {
+            text: "axios",
+            link: "/netWork/Axios介绍和基本使用.md",
+          },
+          {
+            text: "状态码",
+            link: "/netWork/状态码.md",
+          },
+          {
+            text: "基本知识",
+            link: "/netWork/面试基本问题.md",
+          },
+        ],
+      },
       // TS
       {
         text: "Typescript",
